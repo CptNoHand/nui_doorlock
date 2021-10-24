@@ -2310,43 +2310,7 @@ table.insert(Config.DoorList, {
     -- autoLock = 1000
 })
 
--- UNNAMED DOOR CREATED BY Cpt NoHand
-table.insert(Config.DoorList, {
-	lockpick = false,
-	slides = false,
-	garage = false,
-	fixText = false,
-	objCoords = vector3(-774.5036, 334.596, 243.288),
-	locked = true,
-	objHash = 1980513646,
-	audioRemote = false,
-	objHeading = 269.99996948242,
-	authorizedJobs = { ['tuner']=0 },
-	maxDistance = 2.0,        
-    -- oldMethod = true,
-    -- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    -- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    -- autoLock = 1000
-})
 
--- UNNAMED DOOR CREATED BY Cpt NoHand
-table.insert(Config.DoorList, {
-	lockpick = false,
-	slides = false,
-	garage = false,
-	fixText = false,
-	objCoords = vector3(-765.0305, 330.3959, 243.8943),
-	locked = true,
-	objHash = -1102142939,
-	audioRemote = false,
-	objHeading = 90.078437805176,
-	authorizedJobs = { ['tuner']=0 },
-	maxDistance = 2.0,        
-    -- oldMethod = true,
-    -- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    -- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    -- autoLock = 1000
-})
 
 -- UNNAMED DOOR CREATED BY Cpt NoHand
 table.insert(Config.DoorList, {
