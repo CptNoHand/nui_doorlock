@@ -3,10 +3,10 @@
 A conversion of [nui_doorlock](https://github.com/thelindat/nui_doorlock) for [QBCore](https://github.com/qbcore-framework/qb-core). Thank you Linden for this amazing resource, unfortunately Linden has taken it off of their github so this repo now looks like it's a fork of another one but it was originally a fork of the original which was [Linden's](https://github.com/thelindat) repo
 
 <hr>
-<p align="center"><img src='https://user-images.githubusercontent.com/65407488/114383355-cbd26c00-9bd0-11eb-9079-8c341e6824b1.png'></img></p>
+<p align="center"><img src='https://i.imgur.com/7yzvz1b.png'></img></p>
 <hr>
 
-* Easily add and configure new doors! <a href='https://streamable.com/e290wk'>Example video</a>  
+* Easily add and configure new doors! <a href='https://streamable.com/591vqz'>Example video</a>  
 Use the `/newdoor` command to automatically create a new entry on the DoorList.  
 
 * No more `SetEntityHeading` and `FreezeEntityPosition` natives.  
@@ -36,8 +36,7 @@ Allow the door to be lockpicked with `lockpick = true`
 Allow item authorisation with `items = {'key_master', 'key_lspd'}` etc.  
 
 <hr>
-<p align="center">https://streamable.com/oheu5e  
-<img src="https://i.imgur.com/Sug2Nj5.jpg"/></p>
-
+<p align="center">https://youtu.be/OR9jxg5r_K0
+<img src="https://i.imgur.com/swapFgK.jpg"/></p>
 
 <p align='center'><img src="https://i.imgur.com/2Yz7Rtm.png"/></img></p>

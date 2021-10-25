@@ -1,10 +1,11 @@
 local QBCore = exports['qb-core']:GetCoreObject()
+local Config = Config
 
 --------------------------
 -- Functions
 --------------------------
 
-local function IsAuthorized(Player, doorID, usedLockpick, isScript)
+local IsAuthorized = function(Player, doorID, usedLockpick, isScript)
     if isScript then return true end
 
     if doorID.lockpick and usedLockpick then
@@ -12,13 +13,13 @@ local function IsAuthorized(Player, doorID, usedLockpick, isScript)
     end
 
     if doorID.authorizedJobs then
-        if doorID.authorizedJobs[Player.PlayerData.job.name] and doorID.authorizedJobs[Player.PlayerData.job.name] >= Player.PlayerData.job.grade.level then
+        if doorID.authorizedJobs[Player.PlayerData.job.name] and Player.PlayerData.job.grade.level >= doorID.authorizedJobs[Player.PlayerData.job.name] then
             return true
         end
     end
 
     if doorID.authorizedGangs then
-        if doorID.authorizedGangs[Player.PlayerData.gang.name] and doorID.authorizedGangs[Player.PlayerData.gang.name] >= Player.PlayerData.gang.grade.level then
+        if doorID.authorizedGangs[Player.PlayerData.gang.name] and Player.PlayerData.gang.grade.level >= doorID.authorizedGangs[Player.PlayerData.gang.name] then
             return true
         end
     end
@@ -40,10 +41,15 @@ local function IsAuthorized(Player, doorID, usedLockpick, isScript)
         end
     end
 
-    if Config.AdminAccess and QBCore.Functions.HasPermission(Player.PlayerData.source, 'admin') then
+    if (not doorID.authorizedJobs or not next(doorID.authorizedJobs)) and (not doorID.authorizedGangs or not next(doorID.authorizedGangs)) and (not doorID.authorizedCIDs or not next(doorID.authorizedCIDs)) and (not doorID.items or not next(doorID.items)) and not doorID.lockpick then
+        return true
+    end
+
+    if Config.AdminAccess.enabled and QBCore.Functions.HasPermission(Player.PlayerData.source, Config.AdminAccess.permission) then
         print(Player.PlayerData.name..' opened a door using admin privileges')
         return true
     end
+
     return false
 end
 
@@ -54,36 +60,38 @@ end
 RegisterNetEvent('nui_doorlock:server:updateState', function(doorID, locked, src, usedLockpick, isScript, sentSource)
     local playerId = source or sentSource
     local Player = QBCore.Functions.GetPlayer(playerId)
+    if Player then
+        if type(doorID) ~= 'number' then
+            print(('nui_doorlock: %s (%s) didn\'t send a number! (Sent %s)'):format(Player.PlayerData.name, Player.PlayerData.license, doorID))
+            return
+        end
 
-    if type(doorID) ~= 'number' then
-        print(('nui_doorlock: %s (%s) didn\'t send a number! (Sent %s)'):format(Player.PlayerData.name, Player.PlayerData.license, doorID))
-        return
-    end
+        if type(locked) ~= 'boolean' then
+            print(('nui_doorlock: %s (%s) attempted to update invalid state! (Sent %s)'):format(Player.PlayerData.name, Player.PlayerData.license, locked))
+            return
+        end
 
-    if type(locked) ~= 'boolean' then
-        print(('nui_doorlock: %s (%s) attempted to update invalid state! (Sent %s)'):format(Player.PlayerData.name, Player.PlayerData.license, locked))
-        return
-    end
+        if not Config.DoorList[doorID] then
+            print(('nui_doorlock: %s (%s) attempted to update invalid door! (Sent %s)'):format(Player.PlayerData.name, Player.PlayerData.license, doorID))
+            return
+        end
 
-    if not Config.DoorList[doorID] then
-        print(('nui_doorlock: %s (%s) attempted to update invalid door! (Sent %s)'):format(Player.PlayerData.name, Player.PlayerData.license, doorID))
-        return
-    end
+        if not IsAuthorized(Player, Config.DoorList[doorID], usedLockpick, isScript) then
+            print(('nui_doorlock: %s (%s) attempted to open a door without authorisation!'):format(Player.PlayerData.name, Player.PlayerData.license))
+            return
+        end
 
-    if not IsAuthorized(Player, Config.DoorList[doorID], usedLockpick, isScript) then
-        return
-    end
+        Config.DoorList[doorID].locked = locked
+        if not src then TriggerClientEvent('nui_doorlock:client:setState', -1, playerId, doorID, locked, false, isScript)
+        else TriggerClientEvent('nui_doorlock:client:setState', -1, playerId, doorID, locked, src, isScript) end
 
-    Config.DoorList[doorID].locked = locked
-    if not src then TriggerClientEvent('nui_doorlock:client:setState', -1, playerId, doorID, locked, false, isScript)
-    else TriggerClientEvent('nui_doorlock:client:setState', -1, playerId, doorID, locked, src, isScript) end
-
-    if Config.DoorList[doorID].autoLock then
-        SetTimeout(Config.DoorList[doorID].autoLock, function()
-            if Config.DoorList[doorID].locked then return end
-            Config.DoorList[doorID].locked = true
-            TriggerClientEvent('nui_doorlock:client:setState', -1, -1, doorID, true, isScript)
-        end)
+        if Config.DoorList[doorID].autoLock then
+            SetTimeout(Config.DoorList[doorID].autoLock, function()
+                if Config.DoorList[doorID].locked then return end
+                Config.DoorList[doorID].locked = true
+                TriggerClientEvent('nui_doorlock:client:setState', -1, -1, doorID, true, isScript)
+            end)
+        end
     end
 end)
 
@@ -91,9 +99,6 @@ RegisterNetEvent('nui_doorlock:server:newDoorCreate', function(config, model, he
     local Player = QBCore.Functions.GetPlayer(source)
     if Player then
         if not QBCore.Functions.HasPermission(source, 'god') then print(Player.PlayerData.name.. 'attempted to create a new door but does not have permission') return end
-        local doorLockedS = tostring(doorLocked)
-        local slidesS = tostring(slides)
-        local garageS = tostring(garage)
         local newDoor, auth1, auth2, auth3 = {}
         if jobs[1] then auth1 = tostring("['"..jobs[1].."']=0") end
         if jobs[2] then auth1 = auth1..', '..tostring("['"..jobs[2].."']=0") end
@@ -108,11 +113,11 @@ RegisterNetEvent('nui_doorlock:server:newDoorCreate', function(config, model, he
         if auth2 then newDoor.authorizedGangs = { auth2 } end
         if auth3 then newDoor.authorizedCIDs = { auth3 } end
         if item then newDoor.items = { item } end
-        newDoor.locked = doorLockedS
+        newDoor.locked = doorLocked
         newDoor.maxDistance = maxDistance
-        newDoor.slides = slidesS
+        newDoor.slides = slides
         if not doubleDoor then
-            newDoor.garage = garageS
+            newDoor.garage = garage
             newDoor.objHash = model
             newDoor.objHeading = heading
             newDoor.objCoords = coords
@@ -181,14 +186,6 @@ RegisterNetEvent('nui_doorlock:server:newDoorCreate', function(config, model, he
         if cids[3] then newDoor.authorizedCIDs = { [cids[1]] = true, [cids[2]] = true, [cids[3]] = true }
         elseif cids[2] then newDoor.authorizedCIDs = { [cids[1]] = true, [cids[2]] = true }
         elseif cids[1] then newDoor.authorizedCIDs = { [cids[1]] = true } end
-
-        if item then newDoor.Items = { item } end
-
-        newDoor.locked = doorLocked
-        newDoor.slides = slides
-        if not doubleDoor then
-            newDoor.garage = garage
-        end
 
         Config.DoorList[newDoor.doorID] = newDoor
         TriggerClientEvent('nui_doorlock:client:newDoorAdded', -1, newDoor, newDoor.doorID, doorLocked)
