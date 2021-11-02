@@ -3014,3 +3014,62 @@ table.insert(Config.DoorList, {
     -- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
     -- autoLock = 1000
 })
+
+-- Redline Front
+table.insert(Config.DoorList, {
+	slides = false,
+	authorizedJobs = { ['tuner']=0 },
+	doorID = 167,
+	locked = true,
+	lockpick = false,
+	audioRemote = false,
+	maxDistance = 2.5,
+	doors = {
+		{objHash = 733700947, objHeading = 270.00003051758, objCoords = vector3(-598.0059, -928.572, 24.02803)},
+		{objHash = -930505499, objHeading = 270.00003051758, objCoords = vector3(-598.0059, -931.1721, 24.02803)}
+    },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+})
+
+-- Redline Workshop
+table.insert(Config.DoorList, {
+	maxDistance = 6.0,
+	doorID = 168,
+	audioRemote = false,
+	lockpick = false,
+	objHeading = 89.999977111816,
+	garage = true,
+	fixText = false,
+	locked = true,
+	slides = true,
+	authorizedJobs = { ['tuner']=0 },
+	objCoords = vector3(-561.1066, -930.1593, 25.58847),
+	objHash = -610223133,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+})
+
+-- Redline Showroom Garage
+table.insert(Config.DoorList, {
+	maxDistance = 6.0,
+	doorID = 169,
+	audioRemote = false,
+	lockpick = false,
+	objHeading = 0.0,
+	garage = true,
+	fixText = false,
+	locked = true,
+	slides = true,
+	authorizedJobs = { ['tuner']=0 },
+	objCoords = vector3(-532.6376, -885.9293, 26.27159),
+	objHash = 1827434119,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+})
