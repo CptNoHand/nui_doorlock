@@ -3073,3 +3073,22 @@ table.insert(Config.DoorList, {
     --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
     --autoLock = 1000
 })
+
+-- Mayas
+table.insert(Config.DoorList, {
+	doorID = 173,
+	objHash = -1697796712,
+	objHeading = 63.641342163086,
+	fixText = false,
+	locked = true,
+	objCoords = vector3(2071.592, 3328.265, 46.3884),
+	lockpick = false,
+	audioRemote = false,
+	slides = false,
+	maxDistance = 2.0,
+	garage = false,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+})
