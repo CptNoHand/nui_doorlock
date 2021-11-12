@@ -3041,7 +3041,7 @@ Config.DoorList[#Config.DoorList+1] = {
 	lockpick = false,
 	authorizedJobs = { ['police']=0 },
 	doorID = 171,
-	locked = true,
+	locked = false,
 	audioRemote = false,
 	doors = {
 		{objHash = -1501157055, objHeading = 315.22174072266, objCoords = vector3(-442.6569, 6015.222, 31.86523)},
@@ -3356,7 +3356,7 @@ Config.DoorList[#Config.DoorList+1] = {
 	lockpick = false,
 	authorizedJobs = { ['police']=0 },
 	doorID = 187,
-	locked = true,
+	locked = false,
 	audioRemote = false,
 	doors = {
 		{objHash = -2023754432, objHeading = 44.84232711792, objCoords = vector3(-442.8578, 6010.958, 31.86523)},
@@ -3732,7 +3732,7 @@ Config.DoorList[#Config.DoorList+1] = {
 	garage = false,
 	objCoords = vector3(1845.198, 2585.24, 46.09929),
 	doorID = 203,
-	locked = true,
+	locked = false,
 	objHeading = 89.890563964844,
 	objHash = -1033001619,
 	fixText = false,
