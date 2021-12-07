@@ -533,62 +533,6 @@ table.insert(Config.DoorList, {
     -- autoLock = 1000
 })
 
--- Front DOUBLEDOOR CREATED BY MafryxZ
-table.insert(Config.DoorList, {
-	slides = false,
-	authorizedJobs = { ['sunrise']=0, ['police']=0 },
-	lockpick = false,
-	maxDistance = 2.5,
-	locked = true,
-	audioRemote = false,
-	doors = {
-		{objHash = 1718041838, objHeading = 300.07666015625, objCoords = vector3(-801.9141, -224.5258, 37.92628)},
-		{objHash = 1718041838, objHeading = 120.07666015625, objCoords = vector3(-803.0355, -222.6251, 37.92628)}
- },        
-    -- oldMethod = true,
-    -- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    -- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    -- autoLock = 1000
-})
-
--- Garage 1 DOOR CREATED BY MafryxZ
-table.insert(Config.DoorList, {
-	authorizedJobs = { ['sunrise']=0, ['police']=0 },
-	maxDistance = 6.0,
-	locked = true,
-	fixText = false,
-	slides = true,
-	objHeading = 23.076652526855,
-	objHash = 1409837716,
-	objCoords = vector3(-770.7455, -239.9874, 37.59688),
-	garage = true,
-	lockpick = false,
-	audioRemote = false,        
-    -- oldMethod = true,
-    -- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    -- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    -- autoLock = 1000
-})
-
--- Garage 2 DOOR CREATED BY MafryxZ
-table.insert(Config.DoorList, {
-	authorizedJobs = { ['sunrise']=0, ['police']=0 },
-	maxDistance = 6.0,
-	locked = true,
-	fixText = false,
-	slides = true,
-	objHeading = 23.076652526855,
-	objHash = 1409837716,
-	objCoords = vector3(-765.7002, -237.8787, 37.59688),
-	garage = true,
-	lockpick = false,
-	audioRemote = false,        
-    -- oldMethod = true,
-    -- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    -- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    -- autoLock = 1000
-})
-
 -- TAXI DOOR CREATED BY MafryxZ
 table.insert(Config.DoorList, {
 	slides = false,
@@ -3036,301 +2980,6 @@ table.insert(Config.DoorList, {
     --autoLock = 1000
 })
 
--- sheriffzelle
-Config.DoorList[#Config.DoorList+1] = {
-	objCoords = vector3(1858.998, 3694.937, 30.40922),
-	authorizedJobs = { ['police']=0 },
-	maxDistance = 2.0,
-	slides = false,
-	lockpick = false,
-	audioRemote = false,
-	doorID = 189,
-	objHeading = 300.0,
-	fixText = false,
-	garage = false,
-	objHash = -1927754726,
-	locked = true,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- sheriffzelle1
-Config.DoorList[#Config.DoorList+1] = {
-	objCoords = vector3(1860.898, 3691.643, 30.40922),
-	authorizedJobs = { ['police']=0 },
-	maxDistance = 2.0,
-	slides = false,
-	lockpick = false,
-	audioRemote = false,
-	doorID = 190,
-	objHeading = 300.0,
-	fixText = false,
-	garage = false,
-	objHash = -1927754726,
-	locked = true,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- sheriffzelle2
-Config.DoorList[#Config.DoorList+1] = {
-	objCoords = vector3(1862.763, 3688.414, 30.40922),
-	authorizedJobs = { ['police']=0 },
-	maxDistance = 2.0,
-	slides = false,
-	lockpick = false,
-	audioRemote = false,
-	doorID = 191,
-	objHeading = 300.0,
-	fixText = false,
-	garage = false,
-	objHash = -1927754726,
-	locked = true,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- sheriffzelle3
-Config.DoorList[#Config.DoorList+1] = {
-	objCoords = vector3(1859.697, 3686.644, 30.40922),
-	authorizedJobs = { ['police']=0 },
-	maxDistance = 2.0,
-	slides = false,
-	lockpick = false,
-	audioRemote = false,
-	doorID = 192,
-	objHeading = 299.99990844727,
-	fixText = false,
-	garage = false,
-	objHash = -1927754726,
-	locked = true,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- Doppeltür zu den Zellen
-Config.DoorList[#Config.DoorList+1] = {
-	lockpick = false,
-	authorizedJobs = { ['police']=0 },
-	doorID = 193,
-	locked = true,
-	audioRemote = false,
-	doors = {
-		{objHash = -2023754432, objHeading = 299.86767578125, objCoords = vector3(1849.679, 3683.854, 30.41207)},
-		{objHash = -2023754432, objHeading = 120.43684387207, objCoords = vector3(1850.982, 3681.609, 30.40699)}
-    },
-	maxDistance = 2.5,
-	slides = false,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- tür zum treppenhaus
-Config.DoorList[#Config.DoorList+1] = {
-	lockpick = false,
-	authorizedJobs = { ['police']=0 },
-	doorID = 194,
-	locked = true,
-	audioRemote = false,
-	doors = {
-		{objHash = -2023754432, objHeading = 210.19721984863, objCoords = vector3(1848.657, 3683.925, 30.41104)},
-		{objHash = -2023754432, objHeading = 30.068523406982, objCoords = vector3(1846.414, 3682.625, 30.40913)}
-    },
-	maxDistance = 2.5,
-	slides = false,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- tür zum treppenhaus1
-Config.DoorList[#Config.DoorList+1] = {
-	lockpick = false,
-	authorizedJobs = { ['police']=0 },
-	doorID = 195,
-	locked = true,
-	audioRemote = false,
-	doors = {
-		{objHash = -2023754432, objHeading = 30.068523406982, objCoords = vector3(1846.414, 3682.625, 34.41827)},
-		{objHash = -2023754432, objHeading = 210.19721984863, objCoords = vector3(1848.657, 3683.925, 34.42036)}
-    },
-	maxDistance = 2.5,
-	slides = false,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- tür zum treppenhaus2
-Config.DoorList[#Config.DoorList+1] = {
-	lockpick = false,
-	authorizedJobs = { ['police']=0 },
-	doorID = 196,
-	locked = true,
-	audioRemote = false,
-	doors = {
-		{objHash = -2023754432, objHeading = 120.43684387207, objCoords = vector3(1851.288, 3681.87, 34.41656)},
-		{objHash = -2023754432, objHeading = 299.86767578125, objCoords = vector3(1849.982, 3684.115, 34.41656)}
-    },
-	maxDistance = 2.5,
-	slides = false,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- amory5
-Config.DoorList[#Config.DoorList+1] = {
-	objCoords = vector3(1844.264, 3694.152, 34.41656),
-	authorizedJobs = { ['police']=0 },
-	maxDistance = 2.0,
-	slides = false,
-	lockpick = false,
-	audioRemote = false,
-	doorID = 197,
-	objHeading = 299.6628112793,
-	fixText = false,
-	garage = false,
-	objHash = -519068795,
-	locked = true,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- umkleide sheriff
-Config.DoorList[#Config.DoorList+1] = {
-	objCoords = vector3(1848.648, 3693.448, 34.41656),
-	authorizedJobs = { ['police']=0 },
-	maxDistance = 2.0,
-	slides = false,
-	lockpick = false,
-	audioRemote = false,
-	doorID = 198,
-	objHeading = 299.6628112793,
-	fixText = false,
-	garage = false,
-	objHash = -2023754432,
-	locked = true,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- tür zu eingangshalle sheriff
-Config.DoorList[#Config.DoorList+1] = {
-	objCoords = vector3(1857.254, 3690.296, 34.41842),
-	authorizedJobs = { ['police']=0 },
-	maxDistance = 2.0,
-	slides = false,
-	lockpick = false,
-	audioRemote = false,
-	doorID = 199,
-	objHeading = 209.07217407227,
-	fixText = false,
-	garage = false,
-	objHash = -2023754432,
-	locked = true,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- Büroräume sheriff
-Config.DoorList[#Config.DoorList+1] = {
-	objCoords = vector3(1852.503, 3694.175, 34.41656),
-	authorizedJobs = { ['police']=0 },
-	maxDistance = 2.0,
-	slides = false,
-	lockpick = false,
-	audioRemote = false,
-	doorID = 200,
-	objHeading = 120.1316986084,
-	fixText = false,
-	garage = false,
-	objHash = -2023754432,
-	locked = true,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- Haupteingang sheriff
-Config.DoorList[#Config.DoorList+1] = {
-	objCoords = vector3(1855.709, 3683.933, 34.59364),
-	authorizedJobs = { ['police']=0 },
-	maxDistance = 2.0,
-	slides = false,
-	lockpick = false,
-	audioRemote = false,
-	doorID = 201,
-	objHeading = 29.409168243408,
-	fixText = false,
-	garage = false,
-	objHash = -1765048490,
-	locked = true,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- doppeltür zu amory
-Config.DoorList[#Config.DoorList+1] = {
-	lockpick = false,
-	authorizedJobs = { ['police']=0 },
-	doorID = 202,
-	locked = true,
-	audioRemote = false,
-	doors = {
-		{objHash = -2023754432, objHeading = 28.971311569214, objCoords = vector3(1847.133, 3689.946, 34.41842)},
-		{objHash = -2023754432, objHeading = 209.07217407227, objCoords = vector3(1849.4, 3691.206, 34.41842)}
-    },
-	maxDistance = 2.5,
-	slides = false,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
--- Sheriffbüro sandy
-Config.DoorList[#Config.DoorList+1] = {
-	objCoords = vector3(1860.748, 3692.4, 34.59364),
-	authorizedJobs = { ['police']=0 },
-	maxDistance = 2.0,
-	slides = false,
-	lockpick = false,
-	audioRemote = false,
-	doorID = 203,
-	objHeading = 30.142646789551,
-	fixText = false,
-	garage = false,
-	objHash = -1765048490,
-	locked = true,
-    --oldMethod = true,
-    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
-    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
-    --autoLock = 1000
-}
-
 -- amoryraum prison
 Config.DoorList[#Config.DoorList+1] = {
 	objCoords = vector3(1837.714, 2595.185, 46.09929),
@@ -4643,6 +4292,210 @@ Config.DoorList[#Config.DoorList+1] = {
 	maxDistance = 6.0,
 	objHash = 1679490598,
 	slides = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Paleto S Eingang created by Cpt NoHand
+Config.DoorList['Paleto S Eingang'] = {
+	slides = false,
+	lockpick = false,
+	maxDistance = 2.5,
+	authorizedJobs = { ['police']=0 },
+	audioRemote = false,
+	locked = false,
+	doors = {
+		{objHash = -111008308, objHeading = 134.99995422363, objCoords = vector3(-444.5232, 6017.015, 31.86654)},
+		{objHash = -1639518317, objHeading = 314.99993896484, objCoords = vector3(-442.6848, 6015.177, 31.86654)}
+    },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Paleto S Sicherheit created by Cpt NoHand
+Config.DoorList['Paleto S Sicherheit'] = {
+	slides = false,
+	garage = false,
+	objCoords = vector3(-453.5475, 6018.071, 31.87158),
+	audioRemote = false,
+	lockpick = false,
+	objHeading = 315.00021362305,
+	maxDistance = 2.0,
+	objHash = -2023754432,
+	fixText = false,
+	locked = true,
+	authorizedJobs = { ['police']=0 },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Paleto S Büro unten created by Cpt NoHand
+Config.DoorList['Paleto S Büro unten'] = {
+	slides = false,
+	lockpick = false,
+	maxDistance = 2.5,
+	authorizedJobs = { ['police']=0 },
+	audioRemote = false,
+	locked = true,
+	doors = {
+		{objHash = 34120519, objHeading = 225.0, objCoords = vector3(-444.1467, 6008.77, 31.86629)},
+		{objHash = 34120519, objHeading = 44.99995803833, objCoords = vector3(-442.3138, 6010.603, 31.86629)}
+    },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Paleto S unten  created by Cpt NoHand
+Config.DoorList['Paleto S unten '] = {
+	slides = false,
+	lockpick = false,
+	maxDistance = 2.5,
+	authorizedJobs = { ['police']=0 },
+	audioRemote = false,
+	locked = true,
+	doors = {
+		{objHash = 964838196, objHeading = 180.00024414062, objCoords = vector3(-447.6311, 6007.947, 31.86654)},
+		{objHash = 964838196, objHeading = 0.00018099999579135, objCoords = vector3(-445.0338, 6007.948, 31.86654)}
+    },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Paleto S hinterausgang created by Cpt NoHand
+Config.DoorList['Paleto S hinterausgang'] = {
+	slides = false,
+	garage = false,
+	objCoords = vector3(-446.3199, 6001.373, 31.8261),
+	audioRemote = false,
+	lockpick = false,
+	objHeading = 134.99992370605,
+	maxDistance = 2.0,
+	objHash = -829332642,
+	fixText = false,
+	locked = true,
+	authorizedJobs = { ['police']=0 },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Paleto S Cells created by Cpt NoHand
+Config.DoorList['Paleto S Cells'] = {
+	slides = false,
+	lockpick = false,
+	maxDistance = 2.5,
+	authorizedJobs = { ['police']=0 },
+	audioRemote = false,
+	locked = true,
+	doors = {
+		{objHash = -1563799200, objHeading = 224.99992370605, objCoords = vector3(-439.0662, 5994.817, 31.80822)},
+		{objHash = 245182344, objHeading = 44.99995803833, objCoords = vector3(-437.2366, 5996.65, 31.80828)}
+    },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Paleto S Cells created by Cpt NoHand
+Config.DoorList['Paleto S Cells'] = {
+	slides = false,
+	garage = false,
+	objCoords = vector3(-435.7572, 5990.618, 31.86654),
+	audioRemote = false,
+	lockpick = false,
+	objHeading = 314.99990844727,
+	maxDistance = 2.0,
+	objHash = 1346738325,
+	fixText = false,
+	locked = true,
+	authorizedJobs = { ['police']=0 },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Paleto S Armory created by Cpt NoHand
+Config.DoorList['Paleto S Armory'] = {
+	slides = false,
+	garage = false,
+	objCoords = vector3(-434.2696, 5997.169, 31.86654),
+	audioRemote = false,
+	lockpick = false,
+	objHeading = 134.99992370605,
+	maxDistance = 2.0,
+	objHash = 1346738325,
+	fixText = false,
+	locked = true,
+	authorizedJobs = { ['police']=0 },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Paleto S Armory 2 created by Cpt NoHand
+Config.DoorList['Paleto S Armory 2'] = {
+	slides = false,
+	garage = false,
+	objCoords = vector3(-430.2646, 5993.246, 31.87254),
+	audioRemote = false,
+	lockpick = false,
+	objHeading = 134.99995422363,
+	maxDistance = 2.0,
+	objHash = 458025182,
+	fixText = false,
+	locked = true,
+	authorizedJobs = { ['police']=0 },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Paleto S oben Office created by Cpt NoHand
+Config.DoorList['Paleto S oben Office'] = {
+	slides = false,
+	garage = false,
+	objCoords = vector3(-443.2491, 6007.194, 36.83669),
+	audioRemote = false,
+	lockpick = false,
+	objHeading = 136.48045349121,
+	maxDistance = 2.0,
+	objHash = -952356348,
+	fixText = false,
+	locked = true,
+	authorizedJobs = { ['police']=0 },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Paleto S oben Office 2 created by Cpt NoHand
+Config.DoorList['Paleto S oben Office 2'] = {
+	slides = false,
+	lockpick = false,
+	maxDistance = 2.5,
+	authorizedJobs = { ['police']=0 },
+	audioRemote = false,
+	locked = true,
+	doors = {
+		{objHash = 736699661, objHeading = 44.99995803833, objCoords = vector3(-446.4706, 6005.338, 36.83657)},
+		{objHash = 736699661, objHeading = 225.00004577637, objCoords = vector3(-444.6336, 6007.175, 36.83657)}
+    },
     --oldMethod = true,
     --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
     --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
