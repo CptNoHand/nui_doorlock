@@ -2905,7 +2905,7 @@ table.insert(Config.DoorList, {
 -- Redline Front
 table.insert(Config.DoorList, {
 	slides = false,
-	authorizedJobs = { ['tuner']=0 },
+	authorizedJobs = { ['redline']=0 },
 	doorID = 167,
 	locked = true,
 	lockpick = false,
@@ -2932,7 +2932,7 @@ table.insert(Config.DoorList, {
 	fixText = false,
 	locked = true,
 	slides = true,
-	authorizedJobs = { ['tuner']=0 },
+	authorizedJobs = { ['redline']=0 },
 	objCoords = vector3(-561.1066, -930.1593, 25.58847),
 	objHash = -610223133,
     --oldMethod = true,
@@ -2952,7 +2952,7 @@ table.insert(Config.DoorList, {
 	fixText = false,
 	locked = true,
 	slides = true,
-	authorizedJobs = { ['tuner']=0 },
+	authorizedJobs = { ['redline']=3 },
 	objCoords = vector3(-532.6376, -885.9293, 26.27159),
 	objHash = 1827434119,
     --oldMethod = true,
@@ -4496,6 +4496,342 @@ Config.DoorList['Paleto S oben Office 2'] = {
 		{objHash = 736699661, objHeading = 44.99995803833, objCoords = vector3(-446.4706, 6005.338, 36.83657)},
 		{objHash = 736699661, objHeading = 225.00004577637, objCoords = vector3(-444.6336, 6007.175, 36.83657)}
     },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Concert created by Cpt NoHand
+Config.DoorList['RR Concert'] = {
+	lockpick = false,
+	doors = {
+		{objHash = 1650276170, objHeading = 143.74017333984, objCoords = vector3(-1004.197, -263.2806, 39.19668)},
+		{objHash = 1650276170, objHeading = 323.78756713867, objCoords = vector3(-1006.291, -261.7467, 39.19526)}
+    },
+	maxDistance = 2.5,
+	slides = false,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	audioRemote = false,
+	locked = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Autohrized created by Cpt NoHand
+Config.DoorList['RR Autohrized'] = {
+	lockpick = false,
+	doors = {
+		{objHash = -1693304723, objHeading = 234.3957824707, objCoords = vector3(-998.4088, -268.2771, 39.19212)},
+		{objHash = 1930160225, objHeading = 234.3957824707, objCoords = vector3(-999.9194, -270.3868, 39.19212)}
+    },
+	maxDistance = 2.5,
+	slides = false,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	audioRemote = false,
+	locked = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Reception created by Cpt NoHand
+Config.DoorList['RR Reception'] = {
+	objHeading = 144.39579772949,
+	slides = false,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	audioRemote = false,
+	maxDistance = 2.0,
+	objCoords = vector3(-1008.176, -275.7034, 39.19226),
+	lockpick = false,
+	garage = false,
+	fixText = false,
+	objHash = -2122500721,
+	locked = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Concert Backdoor created by Cpt NoHand
+Config.DoorList['RR Concert Backdoor'] = {
+	locked = true,
+	maxDistance = 2.5,
+	lockpick = false,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	slides = false,
+	doors = {
+		{objHash = 1650276170, objHeading = 234.3957824707, objCoords = vector3(-995.6696, -261.3473, 39.19092)},
+		{objHash = 1650276170, objHeading = 54.395790100098, objCoords = vector3(-997.1768, -263.4583, 39.19092)}
+    },
+	audioRemote = false,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Backdoor created by Cpt NoHand
+Config.DoorList['RR Backdoor'] = {
+	objHash = -1719935594,
+	objHeading = 26.066831588745,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	objCoords = vector3(-993.4475, -281.3838, 38.36613),
+	maxDistance = 2.0,
+	lockpick = false,
+	audioRemote = false,
+	garage = false,
+	slides = false,
+	fixText = false,
+	locked = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Garage created by Cpt NoHand
+Config.DoorList['RR Garage'] = {
+	objHash = 363383944,
+	objHeading = 207.81890869141,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	objCoords = vector3(-977.819, -264.3036, 37.6967),
+	maxDistance = 6.0,
+	lockpick = false,
+	audioRemote = false,
+	garage = true,
+	slides = true,
+	fixText = false,
+	locked = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Garage created by Cpt NoHand
+Config.DoorList['RR Garage'] = {
+	objHash = -245685349,
+	objHeading = 207.09295654297,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	objCoords = vector3(-986.0651, -256.8754, 38.63122),
+	maxDistance = 2.0,
+	lockpick = false,
+	audioRemote = false,
+	garage = false,
+	slides = false,
+	fixText = false,
+	locked = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Office created by Cpt NoHand
+Config.DoorList['RR Office'] = {
+	objHash = -10590885,
+	objHeading = 234.3957824707,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	objCoords = vector3(-1007.133, -270.3407, 45.02255),
+	maxDistance = 2.0,
+	lockpick = false,
+	audioRemote = false,
+	garage = false,
+	slides = false,
+	fixText = false,
+	locked = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Broadcast created by Cpt NoHand
+Config.DoorList['RR Broadcast'] = {
+	objHash = -10590885,
+	objHeading = 234.3957824707,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	objCoords = vector3(-1013.614, -279.3654, 45.02059),
+	maxDistance = 2.0,
+	lockpick = false,
+	audioRemote = false,
+	garage = false,
+	slides = false,
+	fixText = false,
+	locked = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Studios created by Cpt NoHand
+Config.DoorList['RR Studios'] = {
+	locked = true,
+	maxDistance = 2.5,
+	lockpick = false,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	slides = false,
+	doors = {
+		{objHash = 1103553685, objHeading = 234.3957824707, objCoords = vector3(-1009.767, -280.534, 44.92881)},
+		{objHash = -1135027785, objHeading = 234.3957824707, objCoords = vector3(-1011.202, -282.5387, 44.92881)}
+    },
+	audioRemote = false,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Studio A created by Cpt NoHand
+Config.DoorList['RR Studio A'] = {
+	objHash = -2122500721,
+	objHeading = 324.39575195312,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	objCoords = vector3(-1008.057, -281.2573, 44.94607),
+	maxDistance = 2.0,
+	lockpick = false,
+	audioRemote = false,
+	garage = false,
+	slides = false,
+	fixText = false,
+	locked = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Studio B created by Cpt NoHand
+Config.DoorList['RR Studio B'] = {
+	objHash = -2122500721,
+	objHeading = 144.3957824707,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	objCoords = vector3(-1006.584, -286.3406, 44.91945),
+	maxDistance = 2.0,
+	lockpick = false,
+	audioRemote = false,
+	garage = false,
+	slides = false,
+	fixText = false,
+	locked = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Live Room created by Cpt NoHand
+Config.DoorList['RR Live Room'] = {
+	objHash = -2122500721,
+	objHeading = 117.85738372803,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	objCoords = vector3(-1002.602, -293.5594, 44.9637),
+	maxDistance = 2.0,
+	lockpick = false,
+	audioRemote = false,
+	garage = false,
+	slides = false,
+	fixText = false,
+	locked = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Conference created by Cpt NoHand
+Config.DoorList['RR Conference'] = {
+	objHash = -10590885,
+	objHeading = 117.36884307861,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	objCoords = vector3(-1001.004, -296.6427, 45.01033),
+	maxDistance = 2.0,
+	lockpick = false,
+	audioRemote = false,
+	garage = false,
+	slides = false,
+	fixText = false,
+	locked = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- RR Green Room created by Cpt NoHand
+Config.DoorList['RR Green Room'] = {
+	objHash = -2122500721,
+	objHeading = 297.21160888672,
+	authorizedJobs = { ['rockfordrecords']=0 },
+	objCoords = vector3(-997.4317, -303.537, 44.94191),
+	maxDistance = 2.0,
+	lockpick = false,
+	audioRemote = false,
+	garage = false,
+	slides = false,
+	fixText = false,
+	locked = true,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Basti Apartment Garage created by Cpt NoHand
+Config.DoorList['Basti Apartment Garage'] = {
+	objCoords = vector3(-308.6505, -716.1362, 28.339),
+	locked = true,
+	slides = true,
+	objHeading = 160.0,
+	objHash = 1879668795,
+	maxDistance = 6.0,
+	lockpick = false,
+	audioRemote = false,
+	fixText = false,
+	garage = true,
+	authorizedCIDs = { ['UCC99033']=true },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Basti Apartment Garage Fahrstuhl created by Cpt NoHand
+Config.DoorList['Basti Apartment Garage Fahrstuhl'] = {
+	locked = true,
+	maxDistance = 1.5,
+	lockpick = false,
+	audioRemote = false,
+	doors = {
+		{objHash = -1240156945, objHeading = 159.99998474121, objCoords = vector3(-304.7544, -722.6085, 27.03522)},
+		{objHash = -1240156945, objHeading = 340.0, objCoords = vector3(-306.1639, -722.0955, 27.03522)}
+    },
+	slides = true,
+	authorizedCIDs = { ['UCC99033']=true },
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Basti Apartment  Fahrstuhl oben created by Cpt NoHand
+Config.DoorList['Basti Apartment  Fahrstuhl oben'] = {
+	locked = true,
+	maxDistance = 1.5,
+	lockpick = false,
+	audioRemote = false,
+	doors = {
+		{objHash = -1240156945, objHeading = 249.99996948242, objCoords = vector3(-286.6466, -722.2932, 124.4665)},
+		{objHash = -1240156945, objHeading = 69.999954223633, objCoords = vector3(-287.159, -723.701, 124.4665)}
+    },
+	slides = true,
+	authorizedCIDs = { ['UCC99033']=true },
     --oldMethod = true,
     --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
     --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
