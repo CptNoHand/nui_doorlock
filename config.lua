@@ -4837,3 +4837,41 @@ Config.DoorList['Basti Apartment  Fahrstuhl oben'] = {
     --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
     --autoLock = 1000
 }
+
+-- Redline Secret created by Cpt NoHand
+Config.DoorList['Redline Secret'] = {
+	garage = false,
+	objHash = -1264687887,
+	fixText = false,
+	authorizedJobs = { ['redline']=4 },
+	lockpick = false,
+	audioRemote = false,
+	slides = true,
+	maxDistance = 1.8,
+	objCoords = vector3(-590.1835, -925.5635, 27.1431),
+	locked = true,
+	objHeading = 179.99998474121,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
+
+-- Redline Storage created by Cpt NoHand
+Config.DoorList['Redline Storage'] = {
+	garage = false,
+	objHash = 634417522,
+	fixText = false,
+	authorizedJobs = { ['redline']=0 },
+	lockpick = false,
+	audioRemote = false,
+	slides = false,
+	maxDistance = 2.0,
+	objCoords = vector3(-587.9936, -936.8436, 28.29335),
+	locked = true,
+	objHeading = 89.999977111816,
+    --oldMethod = true,
+    --audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+    --audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+    --autoLock = 1000
+}
